@@ -1,0 +1,130 @@
+html, body {
+    background-color: linear-gradient(135deg, green, yellow);
+}
+.container{
+    margin-top: 100px !important;
+    margin: 0 auto;
+    text-align: center !important;
+    justify-content: center !important; 
+    color: white;
+    font-family: "dosis",sans-serif;
+    width: 50%;
+    border: 6px solid black;
+    border-radius: 30px;
+    background: linear-gradient(135deg, blue, red);
+}
+
+#forme {
+    /* position: sticky; */
+    list-style: none;
+
+    /* text-align: center; */
+    text-align: left ;
+    /* align-items: center; */
+    position: relative;
+    left: 250px;
+    /* margin-left: 60px; */
+    /* width: 500px; */
+}
+.background-clip {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h1::selection {
+    background-color: chocolate;
+    color: black;
+}
+
+
+button{
+    background-color: rgb(61, 61, 212);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: white;
+    background-color: green;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    /* margin-right: 50px; */
+}
+
+input[type="checkbox"]+label::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("untick_1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+input[type="checkbox"]:checked + label::before{
+    background-image: url("tick_2.png");
+}
+
+label{
+    display: inline-block;
+    padding-bottom: 9px;
+    font-size: 16px;
+
+}
+
+
+#password {
+    border-radius: 8px;
+    resize: none;
+}
+
+@media (max-width: 480px) {
+
+    #forme{
+        left: 210px;
+        /* margin-left: 20px; */
+        margin-right: 200px;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+
+    #password {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1400px) {
+    #forme{
+        margin-left: -140px;
+    }
+}
+@media (max-width: 1024px) {
+    #forme{
+        margin-left: -200px;
+    }
+}
+/* @media (max-width: 800px) {
+    #forme{
+        margin-left: -500px;
+    }
+} */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="underwater_bubbles_background_Footage_RZLWg_UxY_E_137.mp4" type="video/mp4">
+        </video>
+        <h1>Strong Password Generator</h1>
+        <h2>Making By Ravi Yadav</h2>
+        <label for="password-length">Password Length:</label>
+        <input type="number" id="password-length" min="4" max="32" value="12">
+        <br>
+        <ul id="forme">
+            <input type="checkbox" id="uppercase" checked>
+            <label for="uppercase">Include Uppercases</label>
+            <br>
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">Include Lowercases</label>
+            <br>
+            <input type="checkbox" id="number" checked>
+            <label for="number">Include Numbers</label>
+            <br>
+            <input type="checkbox" id="spacial-character" checked>
+            <label for="spacial-character">Include Spacial Characters</label>
+        </ul>
+        <br>
+        <button id="generate">Generate Password</button>
+        <button id="copytext">Copy Password</button>
+        <br>
+        <textarea id="password" rows="4" cols="35" readonly></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
